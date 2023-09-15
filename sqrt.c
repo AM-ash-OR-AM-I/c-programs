@@ -1,7 +1,9 @@
 # include <stdio.h>
 # include <math.h>
 
-void main() {
+// use -lm flag to link math library, while compilation.
+// or use g++ (c++) compiler that auto links.
+int main(void) {
     float a, b, c, d, root1, root2;
     printf("Enter values for a, b and c: ");
     scanf("%f%f%f",&a, &b, &c);
