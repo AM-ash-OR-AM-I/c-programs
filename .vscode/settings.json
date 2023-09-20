@@ -1,6 +1,7 @@
 {
     "cmake.configureOnOpen": true,
     "files.associations": {
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "cmath": "cpp"
     }
 }
