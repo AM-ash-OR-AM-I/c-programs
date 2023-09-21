@@ -1,4 +1,4 @@
-# C
+# C Programming
 
 ## Code syntax
 
@@ -41,12 +41,22 @@ struct name {
 e.g.
 
 ```c
-struct point {
-    int x;
-    int y;
-    double area;
+struct Student {
+    int regNo;
+    float marks;
+    char section;
 };
 ```
 
-- `struct point` is the name of the structure
-- It occupies 4 + 4 + 8 = 16 bytes of memory
+- `struct Student` is the name of the structure
+- It occupies 4 + 8 + 4 = 16 bytes of memory
+
+### Using typedef
+
+```c
+typedef struct Student {
+    int regNo;
+    float marks;
+    char section;
+} Student;
+```
