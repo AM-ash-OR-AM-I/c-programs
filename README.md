@@ -60,3 +60,9 @@ typedef struct Student {
     char section;
 } Student;
 ```
+
+### Function declaration
+
+```c
+returnType func(type);
+``
