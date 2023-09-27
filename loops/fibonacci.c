@@ -1,6 +1,6 @@
-#include <stdio.h>
+# include <stdio.h>
 
-void main()
+int main() 
 {
   int n, s = 0, f = 1;
   printf("Enter number n: ");
