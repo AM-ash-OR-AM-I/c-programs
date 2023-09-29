@@ -20,4 +20,3 @@ int main()
   scanf("%d", &n);
   bool pallindrome = checkPallindrome(n);
   printf("%d is %spallindrome", n, pallindrome ? "" : "not ");
-}

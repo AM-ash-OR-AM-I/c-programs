@@ -1,5 +1,5 @@
-# include <stdio.h>;
-void main() {
+#include <stdio.h>;
+void main()
+{
     char greetings[] = "Hello World!";
-    
 }
