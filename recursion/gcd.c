@@ -8,7 +8,8 @@ void main()
   printf("Enter two no.s a & b: ");
   scanf("%d %d", &a, &b);
   int h = gcd(a, b);
-  printf("GCD = %d", h);
+  printf("GCD = %d\n", h);
+  printf("LCM = %d", a*b/h);
 }
 
 int gcd(int a, int b)

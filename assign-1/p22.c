@@ -1,7 +1,7 @@
 # include <stdio.h>
 
 void strInput(){
-  char str[3];
+  char str1[3], str2[3], str[3];
   scanf("%s",&str);
   printf("%s\n",str);
 }
