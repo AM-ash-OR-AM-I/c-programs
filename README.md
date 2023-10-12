@@ -65,4 +65,43 @@ typedef struct Student {
 
 ```c
 returnType func(type);
-``
+```
+
+### Storage classes in c
+
+![Storage class](https://media.geeksforgeeks.org/wp-content/cdn-uploads/Storage-Classes-In-C.png)
+
+- Auto (Used by default)
+    - Slowest access
+    - Stored in stack
+
+```c
+auto int a = 32; 
+```
+
+- Register
+    - Fastest access
+    - Used for variables that are accessed more times during program
+
+```c
+register int x = 324;
+```
+
+- Static 
+    - Faster than auto
+    - Uses data segment
+    - Initialized only one during compilation
+
+```c
+static int x=324;
+```
+
+- Extern
+  - Global variables
+    ```c
+    int x = 324;
+    int main(){
+        extern int val;
+        printf("Global var %d", val);
+    }
+    ```
