@@ -17,3 +17,9 @@ void printIntArray(int n, int *arr)
     printf("%d ", arr[i]);
   }
 }
+
+void takeNumberInput(int *n)
+{
+  printf("Enter the number of elements:");
+  scanf("%d", n);
+}
