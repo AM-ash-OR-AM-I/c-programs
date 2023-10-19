@@ -2,6 +2,7 @@
   "cmake.configureOnOpen": true,
   "files.associations": {
     "stdbool.h": "c",
-    "input": "c"
+    "input": "c",
+    "stdio.h": "c"
   }
 }

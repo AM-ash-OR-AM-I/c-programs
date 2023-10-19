@@ -27,8 +27,8 @@ int main()
   int n;
   takeNumberInput(&n);
   int arr[n];
-  takeIntInput(n, arr);
+  input1DArr(n, arr);
   bubbleSort(n, arr);
   printf("Array after sorting: ");
-  printIntArray(n, arr);
+  print1DArr(n, arr);
 }

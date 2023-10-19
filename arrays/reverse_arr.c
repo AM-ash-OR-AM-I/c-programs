@@ -30,7 +30,7 @@ int main()
   printf("Enter the number of elements:");
   scanf("%d", &n);
   int arr[n];
-  takeIntInput(n, arr);
+  input1DArr(n, arr);
   revArr(n, arr);
-  printIntArray(n, arr);
+  print1DArr(n, arr);
 }

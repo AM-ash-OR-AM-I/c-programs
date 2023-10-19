@@ -19,7 +19,7 @@ int main()
   printf("Enter number of elements in arr: ");
   scanf("%d", &n);
   int arr[n];
-  takeIntInput(n, arr);
+  input1DArr(n, arr);
   int key;
   printf("Enter element to search: ");
   scanf("%d", &key);

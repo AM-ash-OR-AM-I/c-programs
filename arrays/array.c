@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-void takeIntInput(int n, int *arr)
+void input1DArr(int n, int *arr)
 {
   printf("Enter elements of arr: ");
   for (int i = 0; i < n; i++)
@@ -11,7 +11,7 @@ void takeIntInput(int n, int *arr)
   }
 }
 
-void printIntArray(int n, int *arr)
+void print1DArr(int n, int *arr)
 {
   printf("Elements of arr are: ");
   for (int i = 0; i < n; i++)
@@ -26,8 +26,8 @@ void intArray()
   printf("Enter number of elements in arr: ");
   scanf("%d", &n);
   int arr[n];
-  takeIntInput(n, &arr);
-  printIntArray(n, &arr);
+  input1DArr(n, &arr);
+  print1DArr(n, &arr);
 }
 
 void charArray()
@@ -64,7 +64,7 @@ void sumArray()
   printf("Enter number of elements in arr: ");
   scanf("%d", &n);
   int arr[n];
-  takeIntInput(n, arr);
+  input1DArr(n, arr);
   findSum(arr, n);
 }
 

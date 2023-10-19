@@ -52,6 +52,6 @@ int main()
   printf("Enter number of elements: ");
   scanf("%d", &n);
   int arr[n];
-  takeIntInput(n, arr);
+  input1DArr(n, arr);
   countFreq(n, arr, 100);
 }
