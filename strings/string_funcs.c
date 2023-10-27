@@ -1,6 +1,14 @@
+#include <ctype.h>
 #include <stdio.h>
 #include <string.h>
 #define MAX 20
+
+void strupr(char *str) {
+  int i;
+  for (i = 0; str[i] != '\0'; i++) {
+    str[i] = tolower(str[i]);
+  }
+}
 
 int main() {
   char string1[MAX], string2[MAX], string3[MAX];
@@ -32,4 +40,8 @@ int main() {
   strcat(string1, string2);
   printf("String1 =");
   puts(string1);
+
+  // Uppercase string1
+  strupr(string1);
+  printf("%s", string1);
 }
