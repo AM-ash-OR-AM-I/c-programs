@@ -1,23 +1,35 @@
 #include <stdio.h>
 #include <string.h>
 #define MAX 20
+
 int main() {
   char string1[MAX], string2[MAX], string3[MAX];
-  printf("Enter the input:");
-  fgets(string1, MAX, stdin);
+  printf("Enter string1 and string2: ");
+  scanf("%s %s", string1, string2);
+  // printf("Enter input1:");
+  // fgets(string1, MAX, stdin);
 
-  printf("Enter the input:");
-  fgets(string2, MAX, stdin);
-
-  // char *ptr1 = string1, *ptr2 = string2;
+  // printf("Enter input2:");
+  // fgets(string2, MAX, stdin);
 
   // Compare two strings and return 0 if they are equal otherwise the difference
   // between the ASCII value of the first unmatched character
-  printf("%d", strcmp(string1, string2));
+  printf("Difference at first mismatch: %d\n", strcmp(string1, string2));
 
   // Copy string3 from string1 (destination, source)
   strcpy(string3, string1);
 
-  // puts(string1);
-  // puts(string3);
+  // length of string if the null character is not included.
+  // \n is included in the length so we need to subtract 1
+  printf("Length = %d\n", strlen(string1) - 1);
+
+  printf("String1 =");
+  puts(string1);
+  printf("String3 =");
+  puts(string3);
+
+  // Concatenate string2 to string1
+  strcat(string1, string2);
+  printf("String1 =");
+  puts(string1);
 }

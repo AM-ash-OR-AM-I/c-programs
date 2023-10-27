@@ -3,6 +3,7 @@
   "files.associations": {
     "stdbool.h": "c",
     "input": "c",
-    "stdio.h": "c"
+    "stdio.h": "c",
+    "string.h": "c"
   }
 }

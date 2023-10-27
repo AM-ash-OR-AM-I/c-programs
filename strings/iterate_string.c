@@ -1,17 +1,17 @@
 #include <stdio.h>
 
 int main() {
-  char string[20];
+  char string[7];
 
   printf("Enter the input:");
-  fgets(string, 20, stdin);
+  fgets(string, 7, stdin);
   // char *ptr = string;
 
   // while (*ptr != '\0') {
   //   printf("%c", *ptr);
   //   ptr++;
   // }
-  for (int i = 0; i < 20; i++) {
+  for (int i = 0; i < 7; i++) {
     printf("%c ", *(string + i));
   }
 }
