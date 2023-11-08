@@ -24,6 +24,11 @@ int main() {
   // between the ASCII value of the first unmatched character
   printf("Difference at first mismatch: %d\n", strcmp(string1, string2));
 
+  // Compare string1 and string2 upto 3 character
+  strncmp(string1, string2, 3);
+
+  printf("String1, string2");
+
   // Copy string3 from string1 (destination, source)
   strcpy(string3, string1);
 

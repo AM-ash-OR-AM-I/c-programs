@@ -4,6 +4,7 @@
     "stdbool.h": "c",
     "input": "c",
     "stdio.h": "c",
-    "string.h": "c"
+    "string.h": "c",
+    "string_view": "c"
   }
 }
