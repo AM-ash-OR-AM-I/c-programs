@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void swap(char *string, int i, int j) {
+void swap2(char *string, int i, int j) {
   char temp = string[i];
   string[i] = string[j];
   string[j] = temp;
@@ -11,7 +11,7 @@ void reverseRecursive(char *string, int low, int high) {
   if (low >= high) {
     return;
   }
-  swap(string, low, high);
+  swap2(string, low, high);
   reverseRecursive(string, low + 1, high - 1);
 }
 
