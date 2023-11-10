@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/student/anon/c-programs/dynamic_memory",
-      "program": "/home/student/anon/c-programs/dynamic_memory/build/Debug/outDebug",
+      "cwd": "/home/student/anon/c-programs/arrays",
+      "program": "/home/student/anon/c-programs/arrays/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
