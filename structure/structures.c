@@ -1,11 +1,18 @@
 #include <stdio.h>
 
-typedef struct Student
+typedef struct StudentStruct
 {
   int regNo;
   float marks;
   char section;
 } Student;
+
+typedef struct Student
+{
+  int regNo;
+  float marks;
+  char section;
+} Student2;
 
 union Student1
 {
@@ -17,10 +24,10 @@ union Student1
 void main()
 {
 
-  Student details;
-  details.marks = 94.2;
-  details.regNo = 2141013232;
-  details.section = 'k';
+  Student details = {94, 234.432, 'K'};
+
+  // Student2 student;
+
 
   union Student1 s1;
   s1.marks = 94.2;

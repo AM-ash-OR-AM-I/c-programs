@@ -43,6 +43,8 @@ int main() {
 
   // Concatenate string2 to string1
   strcat(string1, string2);
+
+  // strstr()
   printf("String1 =");
   puts(string1);
 

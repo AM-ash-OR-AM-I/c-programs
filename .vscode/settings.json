@@ -5,7 +5,8 @@
     "input": "c",
     "stdio.h": "c",
     "string.h": "c",
-    "string_view": "c"
+    "string_view": "c",
+    "typeinfo": "c"
   },
   "C_Cpp_Runner.msvcBatchPath": "",
   "C_Cpp_Runner.cCompilerPath": "gcc",
