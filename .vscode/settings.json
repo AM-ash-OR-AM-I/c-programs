@@ -6,7 +6,8 @@
     "stdio.h": "c",
     "string.h": "c",
     "string_view": "c",
-    "typeinfo": "c"
+    "typeinfo": "c",
+    "unistd.h": "c"
   },
   "C_Cpp_Runner.msvcBatchPath": "",
   "C_Cpp_Runner.cCompilerPath": "gcc",

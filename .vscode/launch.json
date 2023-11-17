@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/student/anon/c-programs/structure",
-      "program": "/home/student/anon/c-programs/structure/build/Debug/outDebug",
+      "cwd": "/home/student/anon/c-programs/system_programming",
+      "program": "/home/student/anon/c-programs/system_programming/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
