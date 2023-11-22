@@ -105,3 +105,11 @@ static int x=324;
         printf("Global var %d", val);
     }
     ```
+
+
+## Process
+### fork()
+- Clone the calling process, creating an exact copy.
+Return -1 for errors, 0 to the new process (child process), and the process ID of the new process to the old process.
+
+### wait()

@@ -14,4 +14,5 @@ int main() {
         printf("Child Process: %d\n", getpid());
     }
   }
+  return 1;
 }
