@@ -9,7 +9,9 @@
     "typeinfo": "c",
     "unistd.h": "c",
     "Q9.C": "cpp",
-    "stdlib.h": "c"
+    "stdlib.h": "c",
+    "wait.h": "c",
+    "types.h": "c"
   },
   "C_Cpp_Runner.msvcBatchPath": "",
   "C_Cpp_Runner.cCompilerPath": "gcc",
