@@ -7,7 +7,9 @@
     "string.h": "c",
     "string_view": "c",
     "typeinfo": "c",
-    "unistd.h": "c"
+    "unistd.h": "c",
+    "Q9.C": "cpp",
+    "stdlib.h": "c"
   },
   "C_Cpp_Runner.msvcBatchPath": "",
   "C_Cpp_Runner.cCompilerPath": "gcc",
@@ -65,5 +67,8 @@
   "C_Cpp_Runner.useLeakSanitizer": false,
   "C_Cpp_Runner.showCompilationTime": false,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
-  "C_Cpp_Runner.msvcSecureNoWarnings": false
+  "C_Cpp_Runner.msvcSecureNoWarnings": false,
+  "C_Cpp.default.includePath": [
+    "module/"
+  ]
 }
