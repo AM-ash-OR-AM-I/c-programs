@@ -1,19 +1,21 @@
 #include <stdio.h>
-int total(int v) {
-  int count = 0;
-  while (v) {
-    count += v & 1;
-    v >>= 1;
-  }
-  return count;
+
+void fun2(int n);
+
+void fun1(int n) {
+  if (n == 0)
+    return;
+  printf("%d", n);
+  fun2(n - 2);
+  printf("%d", n);
 }
 
-int main() {
-  int x = 0, i = 5;
-  for (; i > 0; i--) {
-    printf("%d", i);
-    x = x + total(i);
-  }
-  printf("%d\n", x);
-  return 0;
+void fun2(int n) {
+  if (n == 0)
+    return;
+  printf("%d", n);
+  fun1(++n);
+  printf("%d", n);
 }
+
+int main() { fun1(5); }

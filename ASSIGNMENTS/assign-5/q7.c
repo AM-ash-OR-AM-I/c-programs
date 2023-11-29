@@ -7,6 +7,6 @@ int SimpleFunction(int y[], int n, int x) {
 }
 
 int main() {
-  int z[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+  int z[] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
   printf("%d", SimpleFunction(z, 10, 2));
 }
