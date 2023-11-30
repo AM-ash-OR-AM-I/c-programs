@@ -113,7 +113,7 @@ static int x=324;
 Return -1 for errors, 0 to the new process (child process), and the process ID of the new process to the old process.
 
 ### wait()
-- `waitpid()`
+- `waitpid()`c 
 
 ### Zombie Process
 - When a child dies first but parent keeps running
