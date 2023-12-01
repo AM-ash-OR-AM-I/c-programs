@@ -9,8 +9,8 @@ int main() {
   fgets(str, 100, stdin);
 
   printf("Enter the delimiter: ");
-  char delimiter[5];
-  fgets(delimiter, 5, stdin);
+  char delimiter[3];
+  fgets(delimiter, 3, stdin);
 
   char *token;
 
