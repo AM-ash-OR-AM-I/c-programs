@@ -66,6 +66,7 @@ void print1DArr(int n, int *arr) {
   for (int i = 0; i < n; i++) {
     printf("%d ", arr[i]);
   }
+  printf("\n");
 }
 
 void takeNumberInput(int *n) {
