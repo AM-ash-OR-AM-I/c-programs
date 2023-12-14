@@ -61,11 +61,42 @@ typedef struct Student {
 } Student;
 ```
 
-### Function declaration
+#### Union vs Struct
 
 ```c
-returnType func(type);
+// All can be assigned and used at the same time
+struct struct_example {
+  int integer;
+  float decimal;
+  char name[20];
+};
+
+// Only any 1 of them can be assigned/used at a time
+union union_example {
+  int integer;
+  float decimal;
+  char name[20];
+};
+
+int main() {
+  struct struct_example s;
+  union union_example u;
+
+  s.integer = 10;
+  s.decimal = 10.5;
+  strcpy(s.name, "Hello World!");
+
+  u.integer = 10;
+  u.decimal = 10.5;
+  strcpy(u.name, "Hello World!");
+
+  printf("struct_example: %d %f %s\n", s.integer, s.decimal, s.name);
+  printf("union_example: %d %f %s\n", u.integer, u.decimal, u.name);
+
+  return 0;
+}
 ```
+
 
 ### Storage classes in c
 
