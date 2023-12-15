@@ -2,7 +2,7 @@
 
 ## Malloc
 
-- It occupies a block of memory of the specified size 
+- It occupies a block of memory of the specified size.
 - Returns a pointer of type void which can be cast into a pointer of any form.
 
 ```c

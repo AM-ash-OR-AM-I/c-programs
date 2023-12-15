@@ -8,15 +8,15 @@ int fgetsStringInput(int n, char str[n]) {
 }
 
 void defaultStringInput(int n, char str[n]) {
-  printf("\nEnter input:");
+  printf("Enter input:");
   scanf("%s", str);
   printf("%s", str);
 }
 
 void fgetsStringInputPointer(int n, char *str) {
   printf("\nEnter input:");
-  scanf("%s", str);
-  printf("%s", str);
+  fgets(str, n, stdin);
+  puts(str);
 }
 
 int main() {
