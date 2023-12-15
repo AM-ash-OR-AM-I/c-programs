@@ -97,38 +97,40 @@ int main() {
 }
 ```
 
-
 ### Storage classes in c
 
 ![Storage class](https://media.geeksforgeeks.org/wp-content/cdn-uploads/Storage-Classes-In-C.png)
 
 - Auto (Used by default)
-    - Slowest access
-    - Stored in stack
+  - Slowest access
+  - Stored in stack
 
-```c
-auto int a = 32; 
-```
+    ```c
+    int a = 32; 
+    ```
 
 - Register
-    - Fastest access
-    - Used for variables that are accessed more times during program
+  - Fastest access
+  - Used for variables that are accessed more times during program
 
-```c
-register int x = 324;
-```
+    ```c
+    register int x = 324;
+    ```
 
-- Static 
-    - Faster than auto
-    - Uses data segment
-    - Initialized only one during compilation
+- Static
+  - Faster than auto
+  - Uses data segment
+  - Initialized only one during compilation
 
-```c
-static int x=324;
-```
+    ```c
+    static int x=324;
+    ```
 
 - Extern
-  - Global variables
+  - Global variable, can be accessed from any function
+  - Can be used to access global variable from another file
+    - file1.c
+
     ```c
     int x = 324;
     int main(){
@@ -137,16 +139,30 @@ static int x=324;
     }
     ```
 
+    - file2.c
+
+    ```c
+    # include <stdio.h>
+    # include "file1.c"
+    extern int x;
+    int main(){
+        printf("Global var %d", x);
+    }
+    ```
 
 ## Process
+
 ### fork()
+
 - Clone the calling process, creating an exact copy.
 Return -1 for errors, 0 to the new process (child process), and the process ID of the new process to the old process.
 
 ### wait()
-- `waitpid()`c 
+
+- `waitpid()` suspends execution of the calling process until a child specified by pid argument has changed state.
 
 ### Zombie Process
+
 - When a child dies first but parent keeps running
 - In process table entry the child process holds resources virtually until parent terminates.
 
@@ -172,6 +188,7 @@ int main() {
 ```
 
 ### Orphan process
+
 - Child is waiting but parent as finished its execution.
 - Child gets assigned to another parent before process terminates.
 
