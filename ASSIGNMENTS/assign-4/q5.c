@@ -18,4 +18,4 @@ void fun2(int n) {
   printf("%d", n);
 }
 
-int main() { fun1(5); }
+int main() { fun1(15); }
