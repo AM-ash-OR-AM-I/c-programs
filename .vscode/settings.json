@@ -11,7 +11,8 @@
     "Q9.C": "cpp",
     "stdlib.h": "c",
     "wait.h": "c",
-    "types.h": "c"
+    "types.h": "c",
+    "math.h": "c"
   },
   "C_Cpp_Runner.msvcBatchPath": "",
   "C_Cpp_Runner.cCompilerPath": "gcc",

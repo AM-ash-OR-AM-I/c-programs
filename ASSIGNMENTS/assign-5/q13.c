@@ -19,8 +19,8 @@ int main() {
 }
 
 int copyDistinctElements(int *arr, int *distArr, int n) {
-  int i = 0, j = 0; // i for arr, j for distArr
-  while (i < n) {
+  int j = 0; // i for arr, j for distArr
+  for (int i = 0; i < n; i++) {
     int found = 0;
     for (int k = 0; k < j; k++) {
       if (arr[i] == distArr[k]) {
@@ -32,7 +32,6 @@ int copyDistinctElements(int *arr, int *distArr, int n) {
       distArr[j] = arr[i];
       j++; // Increment j only when a distinct element is found
     }
-    i++; // Increment i in every iteration
   }
   return j; // Return the number of distinct elements
 }
