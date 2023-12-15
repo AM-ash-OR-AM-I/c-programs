@@ -150,6 +150,34 @@ int main() {
     }
     ```
 
+## Pointers
+
+- Wild pointer: pointer that has not been initialized
+  - Uninitialized pointers are known as wild pointers because they point to some arbitrary memory location and may cause a program to crash or behave unexpectedly.
+  
+  ```c
+    int *ptr;
+    *ptr = 32523;
+    printf("%d", *ptr);
+  ```
+
+- Dangling pointer: pointer that points to a memory location that has been deleted (or freed)
+  
+  ```c
+    int *ptr = (int *)malloc(sizeof(int));
+    *ptr = 32523;
+    free(ptr);
+    printf("%d", *ptr);
+  ```
+  
+- Null pointer: pointer that has been initialized to NULL
+  - NULL is a macro defined in <stdio.h> header file. It is an implementation-defined null pointer constant. It may be defined as 0 or ((void *)0). It is guaranteed that if NULL is defined as 0 then it will always be a null pointer constant.
+  
+  ```c
+    int *ptr = NULL;
+    printf("%d", *ptr);
+  ```
+
 ## Process
 
 ### fork()
