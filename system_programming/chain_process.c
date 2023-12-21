@@ -5,15 +5,17 @@
 
 int main() {
   int pid;
-  for (int i = 0; i < 5; i++) {
+  for (int i = 0; i < 6; i++) {
     pid = fork();
     if (pid > 0) {
       printf("Parent Process: %d\n", getpid());
       break;
     } else {
-      sleep(5);
       printf("Child Process: %d\n", getpid());
     }
   }
+
+  // Waits for char input (Instead of infinite loop)
+  getchar();
   return 1;
 }

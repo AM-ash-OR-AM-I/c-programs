@@ -3,16 +3,16 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-int main() {
+int main(int argc, char const *argv[]) {
+  
   int pid;
   for (int i = 0; i < 5; i++) {
     pid = fork();
-    if (pid == -1) {
-      printf("Error");
-      return 1;
-    } else if (pid == 0) {
-      printf("Child: %d, parent Process: %d\n", getpid(), getppid());
-      // break;
+    if (pid == 0) {
+      printf("Child process: %d\n", getpid());
+      break;
+    } else {
+      printf("Parent process: %d\n", getpid());
     }
   }
   // Waits for char input (Instead of infinite loop)
