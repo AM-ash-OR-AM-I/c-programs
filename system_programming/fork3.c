@@ -6,11 +6,10 @@
 static int process_count = 0;
 
 int main() {
-  for (int i = 0; i < 4; i++) {
+  for (int i = 0; i < 2; i++) {
     fork();
     process_count++;
-    printf("Hello from [child] pid: %d, [parent] pid: %d\n", getpid(),
-           getppid());
   }
+  printf("Hello from [child] pid: %d, [parent] pid: %d\n", getpid(), getppid());
   return 0;
 }

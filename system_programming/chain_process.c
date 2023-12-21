@@ -5,13 +5,14 @@
 
 int main() {
   int pid;
-  for (int i=0; i<5; i++) {
+  for (int i = 0; i < 5; i++) {
     pid = fork();
-    if (pid>0){
-        printf("Parent Process: %d\n", getpid());
-        break;
+    if (pid > 0) {
+      printf("Parent Process: %d\n", getpid());
+      break;
     } else {
-        printf("Child Process: %d\n", getpid());
+      sleep(5);
+      printf("Child Process: %d\n", getpid());
     }
   }
   return 1;
