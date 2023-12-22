@@ -9,7 +9,6 @@ int main() {
         terminatedPid = wait(NULL);
         printf("Terminated process: %d\n", terminatedPid);
         printf("Parent %d\n", getpid());
-    
     } else {
         printf("Child %d\n", getpid());
     }

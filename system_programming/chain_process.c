@@ -14,7 +14,7 @@ int main() {
       printf("Child Process: %d\n", getpid());
     }
   }
-
+ 
   // Waits for char input (Instead of infinite loop)
   getchar();
   return 1;

@@ -11,10 +11,13 @@ int main() {
     return 1;
   } else if (childPid == 0) {
     printf("Child %d, parent %d\n", getpid(), getppid());
-    sleep(5);
-    printf("Child %d, parent %d\n", getpid(), getppid());
+    sleep(15);
+    printf("Child %d, parent %d\n", getpid(),
+           getppid()); // PPID gets changed as the child gets assigned to
+                       // another parent.
   } else {
     printf("Parent pid %d\n", getpid());
+    sleep(5);
     exit(0);
   }
 }
