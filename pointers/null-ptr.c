@@ -35,7 +35,7 @@ int function(int n) { printf("%d\n", n); }
 void function_pointer() {
   void (*ptr)(int);
   ptr = &function;
-  (*ptr)(10);
+  (*ptr)(10);  
 }
 
 void func1() { printf("Hello World func1\n"); }
