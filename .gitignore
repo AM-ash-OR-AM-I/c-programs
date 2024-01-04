@@ -1,0 +1,9 @@
+.vscode/*
+*.o
+*.out
+*
+!/**/
+!*.c
+!*.md
+!*.ipynb
+!.gitignore
