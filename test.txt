@@ -1,2 +1,0 @@
-Hello from [child] pid: 7236, [parent] pid: 7235
-Hello from [child] pid: 7239, [parent] pid: 7238
