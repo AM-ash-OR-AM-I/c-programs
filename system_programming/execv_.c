@@ -5,7 +5,7 @@
 int main()
 {
     printf("Before exec\n");
-    execl("./commandline_args.o", "arg1", "arg2", "arg3",
-          NULL); // second execl isn't working
+    char *argv[] = {"arg1", "arg2", "arg3", NULL};
+    execv("./p2", argv); // second execl isn't working
     printf("After exec\n");
 }
