@@ -7,6 +7,7 @@
 #include <unistd.h>
 
 #include <sys/types.h>
+#include <sys/wait.h>
 
 #define SEM_NAME_1 "/sem_1"
 #define SEM_NAME_2 "/sem_2"
@@ -35,5 +36,11 @@ int main() {
     printf("4\n");
 
     wait(NULL);
+
+    sem_close(sem1);
+    sem_close(sem2);
+
+    sem_unlink(SEM_NAME_1);
+    sem_unlink(SEM_NAME_2);
   }
 }
