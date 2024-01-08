@@ -22,7 +22,7 @@ int main() {
   for (int i = 0; i < 4; i++) {
     printf("Enter elements of arr%d(%c): ", i, 97 + i);
     for (int j = 0; j < n; j++) {
-      scanf("%d", &(*(*(arrayPointers + i) + j)));
+      scanf("%d", &arrayPointers[i][j]);
     }
   }
 
