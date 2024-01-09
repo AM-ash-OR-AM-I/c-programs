@@ -3,18 +3,10 @@
 #include <unistd.h>
 
 int main() {
-  pid_t pid;
-  // pid = fork();
-  if (fork() == 0) {
-    if (fork() == 0) {
-      for (int i = 0; i < 3; i++) {
-        if (fork() == 0) { // If child
-          if (i == 1) {
-            fork();
-          }
-          break;
-        }
-      }
+  for (int j = 0; j < 4; j++) {
+    if (fork() != 0) {
+      fork();
+      break;
     }
   }
 
@@ -23,20 +15,23 @@ int main() {
 }
 
 /*
-Child pid = 49774, parent id = 49188
-Child pid = 49775, parent id = 49774
-Child pid = 49777, parent id = 49776
-Child pid = 49776, parent id = 49775
-Child pid = 49779, parent id = 49776
-Child pid = 49778, parent id = 49776
-Child pid = 49780, parent id = 49778
+Child pid = 53334, parent id = 50687
+Child pid = 53336, parent id = 53334
+Child pid = 53335, parent id = 53334
+Child pid = 53338, parent id = 53335
+Child pid = 53337, parent id = 53335
+Child pid = 53340, parent id = 53337
+Child pid = 53339, parent id = 53337
+Child pid = 53341, parent id = 53339
+Child pid = 53342, parent id = 53339
 
-❯ pstree pid 49774
-─┬◆ 49774 ashutosh ./q26
- └─┬─ 49775 ashutosh ./q26
-   └─┬─ 49776 ashutosh ./q26
-     ├─── 49777 ashutosh ./q26
-     ├─┬─ 49778 ashutosh ./q26
-     │ └─── 49780 ashutosh ./q26
-     └─── 49779 ashutosh ./q26
+─┬◆ 53334 ashutosh ./q26_b
+ ├─┬─ 53335 ashutosh ./q26_b
+ │ ├─┬─ 53337 ashutosh ./q26_b
+ │ │ ├─┬─ 53339 ashutosh ./q26_b
+ │ │ │ ├─── 53341 ashutosh ./q26_b
+ │ │ │ └─── 53342 ashutosh ./q26_b
+ │ │ └─── 53340 ashutosh ./q26_b
+ │ └─── 53338 ashutosh ./q26_b
+ └─── 53336 ashutosh ./q26_b
 */
