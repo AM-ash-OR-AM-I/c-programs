@@ -1,4 +1,3 @@
-#include <signal.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -9,12 +8,14 @@ int main() {
   atexit(exitFunction);
   printf("Inside Main\n");
   printf("Returning from main\n");
-  // return 0;
+
+  // Default exit invokes atexit()
+  return 0;
 
   // Invokes atexit() function
-  // exit(0);
+  exit(0);
 
   // Doesn't invoke atexit()
-  // _Exit(0); // from <stdlib>
   // _exit(0); // from <unistd>
+  // _Exit(0); // from <stdlib>
 }
