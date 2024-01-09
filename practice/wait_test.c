@@ -8,6 +8,7 @@ int main(void) {
   pid = fork();
   if (pid == 0) {
     printf("Child part executed....\n");
+    sleep(40);
     exit(0);
   } else {
     cpid = wait(&status);

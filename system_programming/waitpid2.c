@@ -8,6 +8,7 @@ int main() {
   fork();
   fork();
   pid = waitpid(pid, &status, WNOHANG);
+  printf("%d\n", pid);
   if (pid == 0) {
   } else {
     if (pid > 0) {
