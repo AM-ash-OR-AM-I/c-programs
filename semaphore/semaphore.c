@@ -9,8 +9,25 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
-#define SEM_NAME_1 "/sem_1"
-#define SEM_NAME_2 "/sem_2"
+#define SEM_NAME_1 "sem_1"
+#define SEM_NAME_2 "sem_2"
+
+/**
+ * Why S_IRUSR | S_IWUSR flags are required? 
+If you don't provide the `S_IRUSR | S_IWUSR` flags when creating the
+semaphore with `sem_open()`, the default permissions will be used. The default
+permissions are determined by the current `umask` setting of the process.
+
+However, not providing these flags could potentially lead to issues. If the
+process that created the semaphore doesn't have read and write permissions, it
+won't be able to use `sem_post()` and `sem_wait()` to increment and decrement
+the semaphore's value. This could lead to synchronization issues between the
+processes.
+
+So, it's generally a good idea to explicitly set the permissions when creating a
+semaphore to ensure that the process has the necessary permissions to use the
+semaphore.
+*/
 
 int main() {
   sem_t *sem1, *sem2;

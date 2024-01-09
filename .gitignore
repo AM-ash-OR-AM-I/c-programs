@@ -4,6 +4,7 @@
 *
 !/**/
 !*.c
+!*.h
 !*.md
 !*.ipynb
 !.gitignore

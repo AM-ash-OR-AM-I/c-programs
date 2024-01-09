@@ -10,7 +10,6 @@
 #include <sys/wait.h>
 
 #define SEM_NAME_1 "/sem_1"
-#define SEM_NAME_2 "/sem_2"
 
 // Suppose process 1 must execute statement a before process 2 executes
 // statement b. The semaphore sync enforces the ordering in the following
@@ -36,5 +35,4 @@ int main() {
     sem_close(sync);
   }
   sem_unlink(SEM_NAME_1);
-  
 }

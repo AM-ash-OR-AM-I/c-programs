@@ -3,6 +3,8 @@
 #include <sys/wait.h>
 #include <unistd.h>
 
+// The below code, Doesn't update any value its broken
+
 int main() {
   int *shrd;
   int pid, status;
@@ -14,13 +16,14 @@ int main() {
   *shrd = 0;
 
   // Case-1: Execute P1 first then P2
-  if ((pid = fork()) == 0) {
+  pid = fork();
+  if (pid == 0) {
     // Child process (P-1)
     int x;
 
     // Execute P-1
     x = *shrd;
-    x = x + 1;
+    x = x + 5;
     sleep(1);
     *shrd = x;
 
@@ -32,9 +35,9 @@ int main() {
     // Parent process
     // Wait for child process (P-1) to finish
     waitpid(pid, &status, 0);
-
+    pid = fork();
     // Fork another process (P-2)
-    if ((pid = fork()) == 0) {
+    if (pid == 0) {
       // Child process (P-2)
       int y;
 
