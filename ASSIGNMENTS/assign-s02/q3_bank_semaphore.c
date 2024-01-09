@@ -14,7 +14,6 @@ int main() {
   // O_CREAT (create) -> create if nonexistant
   // O_EXCL (exclusive) -> Error if already exist
   sem_t *sem1 = sem_open(SEM_NAME_1, O_CREAT | O_EXCL, S_IRUSR | S_IWUSR, 0);
-  sem_t *sem2 = sem_open(SEM_NAME_2, O_CREAT | O_EXCL, S_IRUSR | S_IWUSR, 1);
   pid_t pid;
 
   balance = malloc(sizeof(int));
@@ -23,16 +22,13 @@ int main() {
   pid = fork();
   int amount = 100;
   if (pid == 0) {
-    sem_wait(sem2);
     deposit(amount);
     sem_post(sem1);
 
     sem_close(sem1);
-    sem_close(sem2);
   } else {
     sem_wait(sem1);
     withdraw(amount);
-    sem_post(sem2);
 
     sem_close(sem1);
   }
